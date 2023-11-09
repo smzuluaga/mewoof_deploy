@@ -1,0 +1,1797 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,200&family=Poppins:wght@500&display=swap');
+
+* {
+    box-sizing: content-box;
+    margin:0;
+    padding:0;
+    /* border: 1px solid black; */
+}
+
+/*Se definen los colores a utilizar durante la plantilla*/
+:root { 
+    --red: rgba(239, 65, 71, 0.9);
+    --pink: #F05376;
+    --pink2: #F7ABB2;
+    --beige: #E8B77E;
+    --beige2: #E7CFB2;
+    --black2: #3333335f;
+    --black2o3: rgb(51, 51, 51, 0.03);
+    --redo85: rgba(239, 65, 71, 0.85);
+}
+
+/*Cuerpo del html*/
+body {
+    font-family: 'Montserrat';
+    width: 100%; 
+}
+
+
+/*Barra de navegación*/
+.mw-head { 
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.4);
+}
+
+
+.mw-navcontainer {
+    display: flex;
+    height:3.5%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1%;
+    background: var(--pink2);
+    color: white;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    height: 25px;
+    
+}
+
+/* contenedor del encabezado (DIV) */
+.mw-nav {
+    width: 100%;
+}
+
+
+.mw-navcontainer div{
+    
+    display: flex;
+
+}
+
+/*Imagen mewoof*/
+.mw-navcontainer img{
+    display: flex;
+    align-items: center;
+    width: 10%;
+}
+
+/*Nombre mewoof encabezado*/
+.mw-navcontainer h1{
+    display: flex;
+    padding: 10px;
+    align-content: center;
+    color: var(--redo85);
+    font-family: futura;
+    font-size: 30px;
+}
+
+/*Contenedor de img mewoof*/
+.mw-navcontainer-logo {
+    width:20%;
+    margin: 100px;
+    display: flex;
+    align-items: center;
+}
+
+/*Menu hamburguesa*/
+.mw-navcontainer-menu {
+    display:flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin: 100px;
+
+}
+
+/*Listado de navegación (puntos)*/
+.mw-navcontainer-menu li {
+    list-style: none;
+    margin: 0 3%;
+}
+
+/*Enlaces de navegación*/
+.mw-navcontainer-menu a {
+    text-decoration: none;
+    color: var(--black2);
+    font-size: 15px;
+    
+}
+
+/*Establece un segundo estado a los enlaces de navegación*/
+.mw-navcontainer-menu a:hover {
+    font-size: 16px;
+}
+
+/*Enlace de navegación login*/
+.login-modifier {
+    color:white;
+}
+
+/*Botón hamburguesa*/
+.toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    padding: 0 20px;
+    display: none;
+}
+
+
+/* Inicio Pop Up Login*/
+
+.mw-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: none;
+}
+
+.mw-loginCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+    height: 70vh;
+    padding: 20px 20px;
+    background: rgb(35, 35, 35,0.9);
+    color: #fff;
+    border-radius: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.mw-loginCard h1 {
+    font-size: 23px;
+    margin:20% 0;
+    text-align: center;
+}
+
+.botonShow{
+    cursor: pointer;
+}
+
+.mw-loginData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.mw-loginData div{
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.mw-loginData label {
+    text-align: center;
+    font-size: 15px;
+    width: 80%;
+    color:white;
+}
+
+.mw-loginData input{
+    text-align: center;
+    font-size: 12px;
+    font-weight:100;
+    padding: 3px;
+    width: 100%;
+    border: none;
+    outline: 0;   
+    border-radius: 10px;
+    height: 30px;
+    background: rgba(231, 207, 178, 0.65);
+    color: #FFF;
+}
+
+input::placeholder{
+    color:white;
+    font-weight: 0;
+}
+
+.mw-loginData div button{
+    background: none;
+    color: white;
+    border:none;
+    margin-top: 5px;
+
+}
+
+.bx bx-low-vision {
+    position: relative;
+}
+
+.loginCard > div{
+    margin-left: 50px;
+    margin-bottom: 100px; 
+}
+
+.mw-loginClose{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    margin:0;
+    font-size: 20px;
+}
+
+.mw-loginClose button{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.mw-loginData div{
+    display: flex;
+    flex-direction: column;
+}
+
+.mw-loginButtons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.mw-mainButtons{
+    background-color: rgba(247, 171, 178,0.75);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 10px 10px;
+    margin-top: 30px;
+    width:50%
+}
+
+.mw-mainButtons button {
+    background:none;
+    border: none;
+    color: #fff;
+}
+
+#mw-redireccionaTipoUsuario {
+    border:none;
+    background: none;
+    color: #959595;
+    box-shadow: none;
+    width: 100%;
+    margin-top: 50px;
+}
+
+#mw-redireccionaTipoUsuario:hover {
+    color: var(--beige);
+    cursor: pointer;
+}
+
+
+.mw-loginButtons a{
+    text-decoration: none;
+    font-size: 10px;
+    color: #888888;
+    text-align: center;
+}
+/*Fin Pop Up Login*/
+
+/* Inicio Pop Up Tipo de Usuario*/
+.mw-usuarioTipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: none;
+}
+
+.mw-usuarioTipoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+    height: 70vh;
+    padding: 20px 20px;
+    background:  rgb(35, 35, 35,0.9);
+    color: #fff;
+    border-radius: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.mw-usuarioTipoCard h1 {
+    font-size: 20px;
+
+    text-align: center;
+}
+
+.usuarioTipoCard > div{
+    margin-left: 50px;
+    margin-bottom: 100px; 
+}
+
+.mw-usuarioTipoData {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.mw-usuarioTipoClose{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    font-size: 20px;
+}
+
+.mw-usuarioTipoClose button{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+
+}
+
+.mw-usuarioTipoButtons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+}
+
+.mv-usuarioTipoButton {
+    width: 80%;
+    margin: 10px 0;
+    border: none;
+    padding: 15px;
+    border-radius: 20px;
+    background: rgba(231, 207, 178, 0.65);
+    color: white;
+}
+
+.mv-usuarioTipoButton:hover {
+    background: rgba(247, 171, 178,0.75);
+}
+
+#mw-redireccionaLogin2 {
+    background: none;
+    color: #959595;
+    box-shadow: none;
+    width: 100%;
+    border: none;
+}
+
+#mw-redireccionaLogin2:hover {
+    color: var(--beige);
+    cursor: pointer;
+}
+
+/*Fin Pop Up Tipo Usuario*/
+
+/*Inicio Pop Up Register Usuario Dando en Adopcion*/
+.mw-register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.mw-registerCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+    height: 70vh;
+    padding: 20px 20px;
+    background:  rgb(35, 35, 35,0.9);
+    color: #fff;
+    border-radius: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.mw-registerCard h1 {
+    font-size: 23px;
+    margin: 10% 0;
+    text-align: center;
+}
+
+.mw-registerClose {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mw-registerClose button{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.mw-registerData {
+    width: 100%;
+    overflow-y: scroll;
+    height: 60vh;
+}
+
+.mw-registerData::-webkit-scrollbar {
+    display: none;
+}
+
+.mw-user1Form {
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.mw-user1Form div{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mw-user1Form label {
+    font-size: 12px;
+    color: var(--red);
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.mw-user1Form input {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: 0;
+    color: white;
+    font-size: 12px;
+    padding: 3px;
+    font-weight:lighter;
+    margin-bottom: 10px;
+}
+
+.mw-user1Form select{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: 0;
+    color: white;
+    font-size: 12px;
+    padding: 3px;
+    font-weight:lighter;
+    margin-bottom: 10px;
+}
+
+.mw-user1Form option{
+    background: #000;
+   }
+
+.mw-user2Form select{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: 0;
+    color: white;
+    font-size: 12px;
+    padding: 3px;
+    font-weight:lighter;
+    margin-bottom: 10px;
+}
+
+.mw-user2Form option{
+ background: #000;
+}
+
+#mw-redireccionaLogin3 {
+    background: none;
+    color: #959595;
+    box-shadow: none;
+    width: 100%;
+    border: none;
+    margin-top: 5px;
+}
+
+#mw-redireccionaLogin3:hover {
+    color: var(--beige);
+    cursor: pointer;
+}
+
+#mw-registerButtonDandoAdopcion {
+    margin-bottom: 5px;
+}
+
+.mw-registerButtons {
+    width:100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*Fin Pop Up Register Dando en Adopcion*/
+
+/* Inicio Pop Up Login Usuario Adoptando*/
+.mw-register2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+}
+
+.mw-register2Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 250px;
+    height: 70vh;
+    padding: 20px 20px;
+    background:  rgb(35, 35, 35,0.9);
+    color: #fff;
+    border-radius: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.mw-register2Card h1 {
+    font-size: 23px;
+    margin: 10% 0;
+    text-align: center;
+}
+
+.mw-register2Close {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mw-register2Close button{
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.mw-register2Data {
+    width: 100%;
+    overflow-y: scroll;
+    height: 60vh;
+}
+
+.mw-register2Data::-webkit-scrollbar {
+    display: none;
+}
+
+.mw-user2Form {
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.mw-user2Form div{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mw-user2Form label {
+    font-size: 12px;
+    color: var(--red);
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.mw-user2Form input {
+    width:100%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: 0;
+    color: white;
+    font-size: 12px;
+    padding: 3px;
+    font-weight:lighter;
+    margin-bottom: 10px;
+}
+
+#mw-redireccionaLogin4 {
+    background: none;
+    color: #959595;
+    box-shadow: none;
+    width: 100%;
+    border: none;
+    margin-top: 5px;
+}
+
+#mw-redireccionaLogin4:hover {
+    color: var(--beige);
+    cursor: pointer;
+}
+
+#mw-registerButtonDandoAdopcion {
+    margin-bottom: 5px;
+}
+/*Fin Pop Up Login Usuario Adoptando*/
+
+/* Sección HOME*/
+/* HOME*/
+
+/* Sección banner*/
+.section__mwhome {
+    content: url(../img/banner1-op.png) url(../img/banner2.png) url(../img/banner3-op.png) url(../img/banner4.png);
+    animation: banner 15s infinite linear alternate;
+    background-size: cover;
+    height: 600px;
+  }
+  
+  @keyframes banner {
+    0%,
+    20% {
+      background-image: url(../img/banner1-op.png);
+    }
+    25%,
+    45% {
+      background-image: url(../img/banner2.png);
+    }
+    50%,
+    70% {
+      background-image: url(../img/banner3-op.png);
+    }
+    75%,
+    100% {
+      background-image: url(../img/banner4.png);  
+
+    }
+    }
+  
+  
+  .mw-homebanner {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mw-title-banner {
+    color: var(--beige);
+    font-size: 45px;
+    letter-spacing: 5px;
+    font-family:cursive
+  }
+
+  .mwTitleBan {
+    color: white;
+    font-size: 30px;
+    width: auto;
+    margin-bottom: 5%;
+    letter-spacing: 5px;
+  }
+    
+  .mw__buttonBanner {
+    align-items: baseline;
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 15%;
+    height: 30px;
+    background: var(--pink);
+    color: white;
+    font-family: 'poppins';
+    font-size: 16px; 
+    font-weight: bold;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.4);
+  }
+  
+  .mw__buttonBanner:hover {
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+    background: var(--pink2);
+    color: white;
+     cursor: pointer;
+  }
+    
+
+/* Sección items*/
+
+.mw-CasosDeExitos{
+    width: 100%;
+    text-align: center;
+    color: var(--pink2);
+    font-size: 25px;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.mw-CasosDeExitos h3 span {
+    color: var(--red);
+}
+
+
+.pets-container {
+    background-color: var(--black2o3);
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    padding: 5%;
+}
+
+.petStories {
+    width: auto;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.petStories img{
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.petStories p {
+    width: 300px;
+    text-align: justify;
+    margin-left: 10px; 
+}
+
+.petStories span{
+    color: #F05376;
+    font-weight: bold;
+}
+/* Fin items*/
+/* Fin sección HOME*/
+
+/* ABOUT */
+
+.mw-about {
+    border-color: red;
+    box-sizing: border-box;
+}
+
+.mv-aboutflex {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+}
+
+/*Contenedor Misión, Visión, Valores*/
+.mw-aboutcontainer1 {
+    display: flex;
+    justify-content: center;
+    font-size: 14%;
+    color:#666565;
+    
+}
+
+/*Secciones de DIV Misión, Visión, Valores*/
+.mw-aboutcontainer1 div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:3%;
+    margin:5%;
+    width: 20%;
+    height: auto;
+    border-radius: 30px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    /* overflow: scroll; */
+}
+
+/*TITULOS Misión, Visión, Valores*/
+.mw-aboutcontainer1 h3 {
+    text-align: center;
+    margin: 2px 0 25px;
+    font-size: 30px;
+    color: var(--pink);
+}
+
+/*PARRAFOS Misión, Visión, Valores*/
+.mw-aboutcontainer1 p {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    font-size: 15px;
+    font-family:'Montserrat';
+}
+
+/*ABOUT US -TEAM*/
+
+/*Contenedor tarjetas y meet our team*/
+.mw-aboutcontainer2 {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+/*Contenedor meet our team*/
+.mw-aboutcontainer2-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+/*Span del parrafo meet our team (MeWoof)*/
+.mw-aboutcontainer2-head span{
+    color: var(--black2);
+    font-weight: bold;
+}
+
+/*Titulo meet our team*/
+.mw-aboutcontainer2-head h3 {
+    color: var(--red);
+    font-size: 35px;
+    margin: 3%;
+}
+
+/*Parrafo meet our team*/
+.mw-aboutcontainer2-head p {
+    color: var(--black2);
+    font-size: 17px;
+    font-family: 'Montserrat';
+    letter-spacing: 0.2px;
+    padding: 5px 80px; 
+}
+
+/*Contenedor tarjetas de equipo*/
+.mw-aboutcontainer2-cards {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    
+}
+
+.mw-teamcard {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    margin: 3% 2%;
+    height: 30%;
+    width: 15%;
+    font-size: 16px; 
+    color: var(--black2);
+    
+}
+
+/*Botones tarjetas ver más-ver menos*/
+.mw-teamcard button{
+    align-items: baseline;
+    border: none;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 20px;
+    width: 70%;
+    height: 30px;
+    background: var(--pink);
+    color: white;
+    font-family: 'poppins';
+    font-size: 16px; 
+    font-weight: bold;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+}
+
+/*Segundo estado de las tarjetas*/
+.mw-teamcard button:hover {
+    background-color: #FFC859;
+    height: 33px ;
+    font-size:20px;
+    cursor: pointer;
+}
+
+/*Imganes (tarjetas)*/
+.mw-teamcard img {
+    border-radius: 1000px;
+    height: 150px;
+    margin:10px;
+    box-shadow: 0px 6px 6px rgba(183, 181, 181, 0.5);
+    border: none;
+    
+}
+
+/*Titutlos de las tarjetas (nuestros nombres)*/
+.mw-teamcard h4 {
+    margin: 0px 0px 15px;
+    text-align: center;
+    font-size: 15px;
+    width: 100%;
+    color: var(--pink);
+}
+
+/*Contenedor (img, nombres, parrafo)*/
+.mw-cardhead {
+    text-align: center;
+}
+
+.mw-cardhead p{
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/*Div parrafo de las tarjetas*/
+.mw-cardtext {
+    text-align: justify;
+    display: none;
+    font-size: 15px;
+
+}
+
+.mw-cardtext>div {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.mw-cardtext>div>a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+    margin-bottom: 5px;
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.mw-ourTeam-socialMedia:hover {
+    color: #F7ABB2;
+}
+
+/* .mw-cardtext>div>a>i {
+    text-decoration: none;
+    /* cursor: pointer; */
+    /* margin-bottom: 10px;
+    margin-right: 12px;
+    margin-left: 12px; */
+/* } */
+
+
+
+.mw-teamcard:hover  {
+    text-align: justify;
+    color: var(--beige);
+    display:flex;/**/
+    /* flex-grow:0got ba.2;  */
+    font-size: 16px;
+    /* box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.4); */
+    
+}
+
+/*Button mostrar menos (tarjetas)*/
+.mostrar-menos {
+    display:none;
+}
+
+#mw-button-container {
+    width: 100%;
+    text-align: right;
+    margin-right: 9%;
+ }
+
+#enviarButton {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/*Responsive para el NAVEGADOR, SOBRE NOSOTROS, TARJETAS*/
+/*1200 900 600 400*/
+@media screen and (max-width: 1400px) {
+    .mw__buttonBanner{
+        width: 200px;
+        font-size: 12px; 
+        padding: 0;
+    }
+
+    .mw-navcontainer h1 {
+        font-size: 25px;
+    }
+
+    .mw-navcontainer img{
+        width: 30px;
+    }
+
+    .mw-navcontainer-menu a {
+        font-size: 12px;
+        margin: 10px;
+    }
+
+    .mw-aboutcontainer1 p {
+        font-size: 11px;
+    }
+
+    .mw-aboutcontainer1 h3 {
+        font-size: 20px;
+    }
+
+    .mw-aboutcontainer2-head h3 {
+        font-size: 25px;
+    }
+    
+    .mw-aboutcontainer2-head p {
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    .mw-teamcard {
+        font-size: 12px;
+    }
+    
+    .mw-teamcard img {
+        height: 105px;
+    }
+    
+    .mw-teamcard h4 {
+        font-size: 13px;
+        font-weight: 1px;
+    }
+
+    .mw-teamcard button {
+        height: 20px;
+        font-size: 13px;
+    }
+
+    .mw-teamcard button:hover {
+        height: 25px ;
+        font-size:16px;
+    }
+  
+    .mw-navcontainer-menu a:hover {
+        font-size: 13px;
+    }
+
+    .mw-teamcard:hover {
+        font-size: 14px;
+    }
+
+    #mw-button-container {
+        width: 100%;
+        text-align: right;
+        margin-right: 9%;
+     }
+    
+    #enviarButton {
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    
+}
+
+/*Responsive para el NAVEGADOR, SOBRE NOSOTROS, TARJETAS*/
+@media screen and (max-width: 900px) {
+   
+    /*Inicio Login*/
+
+    .mw-loginCard {
+        width: 20%;
+    }
+
+    .mw-loginButtons button{
+        font-size: 12px;
+    }
+
+    .mw-loginButtons a{
+        font-size: 13x;
+    }
+
+    .mw-loginData label, label {
+        font-size: 13px;
+    }
+    /*Fin Login*/
+
+    .mw-navcontainer h1 {
+        font-size: 20px;
+    }
+
+    .mw-navcontainer img{
+        width:25px;
+        margin: 0;
+    }
+    
+    .pets-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .petStories {
+        width: 300px;
+        margin-top: 15px; 
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px 20px;
+        /* border: 1px solid black; */
+        margin-top: 40px;
+    }
+
+    .petStories p {
+        width: 50%;
+        height: auto;
+        font-size: 11px;
+    }
+
+    .petStories img {
+        width: 12vh;
+        height: 12vh;
+    }
+
+    .mw-navcontainer-menu a {
+        font-size: 11px;
+        
+    }
+
+    .mw-aboutcontainer1 p {
+        font-size: 10px;
+    }
+
+    .mw-aboutcontainer1 h3 {
+        font-size: 18px;
+    }
+
+    .mw-aboutcontainer2-head p {
+        font-size: 11px;
+        text-align: center;
+    }
+
+    .mw-aboutcontainer2-cards {
+        flex-wrap: wrap;
+    }
+
+    .mw-teamcard {
+        font-size: 11px;
+        width: 40%;
+    }
+
+    .mw-teamcard {
+        font-size: 11px;
+    }
+    
+    .mw-teamcard img {
+        height: 80px;
+    }
+    
+    .mw-teamcard h4 {
+        font-size: 12px;
+    
+    }
+
+    .mw-teamcard button {
+        height: 17px;
+        font-size: 11px;
+    }
+
+    .mw-teamcard button:hover {
+        height: 21px ;
+        font-size:12px;
+    }
+
+    .mw-navcontainer-menu a:hover {
+    font-size: 11px;
+    }
+
+    .mw-teamcard:hover {
+        font-size: 13px;
+    }
+
+
+     .contactInf {
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+     }
+     
+    .contactInf input{
+        width: 70%;
+        font-size: 1x;
+    }
+
+    .contactInf label{
+        width: 70%;
+        font-size: 13px;
+        margin-left: 45px;
+    }
+
+    .contactHeader p {
+        font-size: 7px;
+    }
+
+     #mw-button-container {
+        width: 100%;
+        text-align: right;
+        margin-right: 25%;
+        z-index: 5;
+     }
+
+    #enviarButton {
+        font-size: 12px;
+        margin-top: 20px;
+        z-index: 5;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 11.5px;
+    }
+
+    
+}
+
+/*Responsive para el NAVEGADOR, SOBRE NOSOTROS, TARJETAS*/
+@media screen and (max-width: 768px) {
+
+    .mw-navcontainer-menu {
+        position: relative;
+        flex-direction: column;
+        background-color: rgba(8,8,8,0.5);
+        width: 30%;
+        height: 80px;
+        transition: left 0.30s;
+        top: 65px;
+        left: 100%;
+    }
+
+    .nav-menu-visible {
+        left:26.5%;
+    }
+
+    .mw-navcontainer-menu {
+        top: 60px;
+        margin:0;
+    }
+
+    .mw-navcontainer img{
+        width: 20px;
+        margin: 0;
+    }
+
+    .mw-navcontainer-logo{
+        margin: 50px;
+    }
+
+    .mw-navcontainer img{
+        width: 20px;
+        margin: 0;
+    }
+    
+
+    .mw-navcontainer-menu a {
+        font-size: 9px;
+        margin: 10px;
+        color: white;
+    }
+    
+
+    .mw-homebanner {
+        height: 400px; /* Cambia la altura a automática para que se ajuste al contenido */
+    }
+    @keyframes banner {
+        0%,
+        20% {
+          background-image: url(../img/banner1-op.png);
+          background-position: center;
+        }
+        20%,
+        45% {
+          background-image: url(../img/banner2.png);
+          background-position: center;
+        }
+        45%,
+        75% {
+          background-image: url(../img/banner3-op.png);
+          background-position: center;
+        }
+        75%,
+        100% {
+          background-image: url(../img/banner4.png);  
+          background-position: center;
+
+        }
+    }
+    .mw__buttonBanner{
+        width: 100px;
+        font-size: 12px; 
+        padding: 0;
+    }
+  /*Termina banner*/
+
+   /*Inicio Login*/
+
+    .mw-loginCard {
+        width: 45%;
+    }
+
+    .mw-loginButtons button{
+        font-size: 10px;
+    }
+
+    .mw-loginButtons a{
+        font-size: 8px;
+    }
+
+    .mw-loginData label, label {
+        font-size: 10px;
+    }
+    
+    /*Fin Login*/
+
+ /*Responsive banner*/
+ .section__mwhome {
+    height: 100%;
+    width: 100%;
+}
+.mw-homebanner h2{
+    font-size: 15px;
+}
+.mw-homebanner h3{
+    font-size: 15px;
+}
+
+
+/*Responsive ITEM SECCIÓN HOME*/
+.pets-container {
+    flex-direction:column;
+    height: auto;
+    padding: 20px;
+    gap: 30px;
+}
+
+.petStories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.petStories img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+.petStories p{
+    width: 250px;
+    font-size: 10px;
+}
+
+/*FIN diseño responsivo pagina home/items*/
+
+.mw-aboutcontainer1 div {
+    width: 40%;
+
+}  
+
+.mw-aboutcontainer1 p {
+    font-size: 9px;
+    height: 180px;
+}
+
+.mw-aboutcontainer1 h3 {
+    font-size: 18px;
+}
+
+.mw-aboutcontainer2-head h3 {
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+.mw-aboutcontainer2-head p {
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 20px;
+    
+}
+
+.mw-aboutcontainer2-cards {
+    flex-wrap: wrap;
+}
+
+.mw-teamcard {
+    font-size: 11px;
+    width: 40%;
+}
+
+.mw-teamcard img {
+    height: 60px;
+}
+
+.mw-teamcard h4 {
+    font-size: 12px;
+
+}
+
+.mw-teamcard button {
+    height: 17px;
+    font-size: 11px;
+}
+
+.mw-teamcard button:hover {
+    height: 21px ;
+    font-size:12px;
+}
+
+.mw-navcontainer-menu a:hover {
+font-size: 11px;
+}
+
+.mw-teamcard:hover {
+    font-size: 13px;
+}
+
+.toggle {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    margin-right: 10%;
+    
+}
+
+#mw-button-container {
+    width: 100%;
+    text-align: right;
+    margin-right: 9%;
+ }
+
+#enviarButton {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+}
+
+/* Sección de contáctenos*/
+.contactUs{
+    margin-top: 100px;
+    background-color: var(--black2o3);
+}
+    /*Encabezado de contáctenos*/
+        .contactHeader h2{
+            padding-top: 30px;
+            color: var(--red);
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contactHeader p{
+            color: var(--black2);
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 60px;
+            font-weight: 100;
+            color: #000;
+        }
+    /*Fin encabezado de contáctenos*/
+
+    /*Formulario*/
+        .contactInf{
+            max-width: 715px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            height: 270px;
+            margin-bottom: 15%;
+        }
+
+        .contactInf label{
+            text-align: left;
+            font-size: 13px;
+            margin-bottom: 5px;
+            margin-left: 10px;
+        }
+
+        .contactInf input{
+            margin-top: 0;
+            margin-bottom: 15px;
+            height: 10px;
+            border-radius: 20px;
+            border: none;
+            border-bottom: 5px solid var(--pink2);
+            font-size: 14px;
+            padding: 20px;
+            color: var(--black2);
+            outline: 0;
+        }
+
+        .contactInf button {
+            height: 32px;
+            background-color: var(--pink);
+            color: white;
+            border: none;
+            border-radius: 180px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: auto;
+            width: 151px;
+        }
+
+        #enviarButton {
+            font-size: 15px;
+        }
+
+    /*Fin formulario*/
+
+    /*Iconos*/
+        .socialMedia {
+            margin-top: 10%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .socialMedia a {
+            text-decoration: none;
+        }
+        
+        .iconLink {
+            font-size: 75px;
+            color: var(--beige);
+        }
+        
+        .socialMediaName {
+            margin-top: 5px;
+            margin-bottom: 50px;
+            font-size: 15px;
+            font-weight: 100;
+        }
+    /*Fin iconos*/
+/* Fin sección de contáctenos*/
+
+/* Sección footer*/
+        .footer{
+            background-color: var(--pink2);
+            height: 40px;
+            color: white;
+            padding-left: 20px;
+            padding-top: 15px;
+        }
+/* Fin sección footer*/
+
+/* Diseño responsivo contáctenos sección*/
+@media (max-width: 768px) {
+    .mw-navcontainer-logo{
+        margin: 30px;
+    }
+
+    .mw-navcontainer-menu {
+        top: 60px;
+        }
+
+    .nav-menu-visible {
+        left:31%;
+    }
+
+    .mw-loginCard {
+        width: 25%;
+        display: flex;
+    }
+
+    .pets-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+     .petStories {
+        width: 300px;
+        margin-top: 15px; 
+        display: flex;
+        flex-direction: row;
+    }
+
+    .petStories img {
+        width: 15vh;
+        height: 15vh;
+    }
+
+
+    .petStories p {
+        width: 50%;
+        height: auto;
+        font-size: 12px;
+    }
+
+    .contactHeader h2{
+        font-size: 20px; /*Tamaño titulo*/
+    }
+    .contactHeader p{
+        font-size: 15px; /*Tamaño frase*/
+    }
+    .contactInf { /*Disminuir espacio entre formulario e iconos*/
+        height: 220px;
+    }
+    .contactInf label{ /*Indicación formulario */
+        font-size: 13px;
+        margin-left: 30px;
+    }
+    .contactInf input{ /*Inputs*/
+        height: 5px;
+        font-size: 13px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contactInf button { /* Botón*/
+        height: 26px;
+        font-size: 12px;
+        width: 110px;
+        margin-right: 60px;
+    }
+    .iconLink { /*Tamaño iconos*/
+        font-size: 45px;
+    }
+    .socialMediaName { /*Tamaño nombre redes*/
+       font-size: 9px;
+    }
+    .footer{ /*Footer letra*/
+        padding-top: 20px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contactInf button { /* Botón*/
+        height: 26px;
+        font-size: 12px;
+        width: 110px;
+        margin-right: 40px;
+    }
+
+    .mw-aboutcontainer1 {
+        height: auto;
+        overflow: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+   
+    .mw-aboutcontainer1 p {
+        overflow: scroll;
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .mw-navcontainer-logo{
+        margin: 30px;
+    }
+
+    .mw-navcontainer-menu {
+        top: 57px;
+        }
+
+    .nav-menu-visible {
+        left:26.5%;
+    }
+
+    .mw-loginCard {
+        width: 45%;
+    }
+
+    .pets-container {
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .petStories {
+        margin-top: 15px; 
+        display: flex;
+        flex-direction: row;
+    }
+
+    .petStories img {
+        width: 15vh;
+        height: 15vh;
+    }
+
+
+    .petStories p {
+        width: 50%;
+        height: auto;
+        font-size: 12px;
+    }
+
+    .mw-aboutcontainer1 h3{
+        margin: 10px;
+    }
+
+    .mw-aboutcontainer1 div{
+        height: 150px;
+    }
+
+    .mw-aboutcontainer1 p{
+        display: flex;
+        font-size: 10.5px;
+        overflow: scroll;
+    }
+
+    .contactInf input{
+        width: 70%;
+        font-size: 11px;
+    }
+
+    .contactInf label{
+        width: 70%;
+        font-size: 13px;
+        margin-left: 45px;
+    }
+
+    .contactHeader p {
+        font-size: 14px;
+    }
+
+    #enviarButton {
+        font-size: 11px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
+/* Fin diseño responsivo contáctenos sección*/

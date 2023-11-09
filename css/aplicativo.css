@@ -1,0 +1,1861 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,400;0,700;1,200&family=Poppins:wght@500&display=swap');
+
+/*Se definen los colores a utilizar durante la plantilla*/
+:root { 
+    --red: #EF4147;
+    --pink: #F05376;
+    --pink2: #F7ABB2;
+    --beige: #E8B77E;
+    --beige2: #E7CFB2;
+    --black2: #3333335f;
+    --black2o3: rgb(51, 51, 51, 0.03);
+    --redo85: rgba(239, 65, 71, 0.85);
+
+}
+
+* {
+  /* box-sizing: content-box; */
+    box-sizing: content-box;
+    margin:0;
+    padding:0;
+    /* border: 1px solid black; */
+}
+
+html {
+  width: 100vw;
+}
+
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../img/fondo-test.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; */
+    /* border: 1px solid var(--red); */
+
+}
+
+.mw-viewScreen {
+  background: rgba(255, 255, 255, 1);
+  box-sizing: content-box;
+  width: 94%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;  
+}
+
+.sidebar-pagina {
+  width: 6%;
+}
+
+/* Aquí empiezan arreglos del sidebar  */
+.mw_sectionMatch {
+    width: 100%;
+    height: 100vh;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    display: none;
+    overflow-y: scroll;
+}
+
+.mw-homebanner {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 100vh;
+    background-color: #F7ABB2;;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    /* position: fixed;
+    z-index: 1; */
+}
+
+.iconoHover {
+    width: 100%;
+    height: 17.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Alinea verticalmente en el centro */
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 5px;
+}
+
+.sidebar img {
+    width: 65px;
+    height: 65px;
+    border-radius: 1000px;
+    cursor: pointer;
+}
+
+.iconoHover i {
+    font-size: 50px;
+    color: #fff;
+}
+
+
+.iconoHover:hover {
+    background-color: #F05376;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+    font-size: 70px;
+
+}
+/* Aquí terminan arreglos del sidebar  */
+
+.mw-viewScreen {
+  background: rgba(255, 255, 255, 0.4);
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/*Inicia arreglos del editar información*/
+.mw-section-profile{
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+.profile-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.closeSesion{
+  display: flex;
+  /* padding-right: 30px; */
+  justify-content: flex-end;
+  /* text-align: left; */
+  /* margin: 60px 50px 20px; */
+}
+
+.btn-close{
+  background-color:rgb(254, 246, 250);
+  width: 150px;
+  height: 25px;
+  border-radius: 10px;
+  color:#333333;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 1px 1px 2px 2px var(--pink2);
+}
+
+.profile-title h1{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--beige);
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.profile-information{
+  display: flex;
+  height: 90%;
+}
+
+.content-user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 25%;
+}
+
+.content-user > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-user img{
+  width: 200px;
+  height: 200px;
+  border-radius: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 4px solid gray;
+}
+
+.content-user h3{
+  color: var(--pink2);
+  font-weight: 10px;
+  font-size: 25px;
+}
+
+.content-user button{
+  font-size: 15px;
+  padding: 5px;
+}
+
+.content-formInf{
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-horizontal{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.form-horizontal div{
+  display: inline-block;  
+  text-align: center;
+}
+
+.form-horizontal input{
+  font-size: 16px;
+}
+
+.form-horizontal label{
+  font-size: 18px;
+}
+
+.form-horizontal .form-control{
+  font-size: 16px;
+}
+
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.mw-flex-wrap div{
+  width: 30%;
+  margin: 10px;  
+  }
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  height:100px;
+  color: var(--pink2);
+  font-size: 20px;
+}
+
+.form-group-about input {
+  height: 100px;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.form-control{
+  border: 1px solid var(--beige)
+}
+
+.mw-flex-wrap input{
+  width: 100%;
+  border-radius: 60px;
+  padding: 5px;
+  border: 1px solid var(--beige);
+}
+
+.mw-flex-wrap select{
+  width: 100%;
+  border-radius: 60px;
+}
+
+.form-input{
+  width: 100%;
+  border-radius: 60px;
+  padding: 5px;
+  border: 1px solid var(--beige);
+  margin-bottom: 25px;
+}
+
+.form-email{
+  color: var(--pink2);
+  font-size: 20px;
+}
+
+/* .form-interesting{
+  font-size: 20px;
+} */
+
+.form-group-about{
+  color: var(--pink);
+}
+
+.btn-same{
+  margin-bottom: 0;
+  margin-top: 1%;
+}
+
+.btn-same-but{
+  background-color: var(--pink);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.6);
+  border-radius: 60px;
+  width: 150px;
+  height: 35px;
+  color: aliceblue;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-close-but{
+  background-color:#E7CFB2;
+  border-radius: 60px;
+  width: 160px;
+  height: 25px;
+  color: gray;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin: 50px 0 0;
+}
+
+
+
+
+.btn-edit-but{
+  background-color:var(--pink);
+  border-radius: 60px;
+  width: 160px;
+  height: 25px;
+  color: aliceblue;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin: 50px 0 0;
+}
+
+.popup {
+  /* width: 100vh; */
+  position: relative;
+  right: 350%;
+  height: 50%;
+}
+.popup input{
+  border: 1px solid var(--pink2);
+}
+
+.popup-close {
+  color: #333333;
+}
+
+.popup-close:hover {
+  cursor: pointer;
+}
+
+.popup-content {
+  color: var(--pink);
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.popup-content div {
+  display: flex;
+  flex-direction: column;
+  margin:10px;
+}
+
+.popup-content button {
+  margin-top: 20px;
+}
+
+.closeButton-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+}
+
+.popup-close {
+  width: 20%;
+  text-align: center;
+  font-size: 22px;
+}
+/*Fin arreglos editar información*/
+
+/*Inicio seccion matches Human*/
+.mw_sectionMatchHuman {
+    width: 100%;
+    height: 100vh;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    display: none;
+}
+
+.cardHuman{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* margin-right: 50%; */
+  width: 350px;
+  padding: 5px;
+  height: 70%;
+  overflow: hidden;
+  background: linear-gradient(0deg, var(--beige2) 10%, var(--beige) 40%);
+  border-radius: 20px;
+  /* position: relative; */
+  text-align:justify;
+    /* Aplica una sombra al elemento utilizando la propiedad box-shadow */
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.caracteristicasMascota p{
+color: #333333;
+}
+
+.buttonsHuman{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+width: 35%;
+}
+
+.buttonsHuman i{
+  color: #EF4147;
+  font-size: 45px;
+  cursor: pointer;
+  background-color: #fff;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(180deg, #ecbcee 0%, #e1d2e1 100%); 
+  box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 70px;
+  margin: 15px;
+  transition: 0.2s transform;
+}
+
+.buttons i:hover {
+transform: scale(1.1);
+}
+
+/*Fin seccion matches Human*/
+
+
+/*Inicio seccion matches Preferences*/
+
+.mw-sectionMatchPreferences {
+  width: 100%;
+  height: 100vh;
+  display: none;
+}
+
+.mw-preferences{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  height: 100vh;
+}
+
+.mww-inputsFiltrosMAscotas{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 30vh;
+}
+
+.mw_preMatchContainer h1{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--beige);
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.mww-inputsFiltrosMAscotas{
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+}
+
+
+.mww-inputsFiltrosMAscotas div{
+  display: flex;
+  flex-direction: column;
+  color: var(--pink2);
+}
+
+.mww-inputsFiltrosMAscotas select{
+  border-color: #E8B77E;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: var(--pink2);
+  width: 100%;
+  padding: 4px;
+}
+
+.buscandoAmor{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width:80%;
+  height: 50vh;
+}
+
+.buscandoAmorCard{
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.buscandoAmorImg {
+  text-align: center;
+
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle:hover {
+  box-shadow: 0 0 10px 5px var(--pink); 
+}
+
+#circle1{
+  background-color: #9CD8EF;
+}
+
+#circle2{
+  background-color: #E3A6CE;
+}
+
+#circle3{
+  background-color: #FFC859;
+}
+
+.circle img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+.buscandoAmorText{
+  width: auto;
+  margin-top: 5px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+  color: #333333;
+}
+/* *********** Fin edición opcional preferencias ************* */
+
+/*Inicio seccion matches*/
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50%;
+    width: 350px;
+    padding: 5px;
+    height: 70%;
+    overflow: hidden;
+    background: linear-gradient(0deg, var(--pink2) 10%, var(--pink) 40%);
+    border-radius: 20px;
+    /* position: relative; */
+    text-align:justify;
+      /* Aplica una sombra al elemento utilizando la propiedad box-shadow */
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+.card__img{
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.cards__text{
+    text-align: left;
+    width: 90%;
+    margin:0 auto;
+    font-size: 20px;
+}
+
+  .card__list{
+    color: var(--gold2);
+    font-weight: 700;
+    /* Establece márgenes en las direcciones superior, derecha, inferior e izquierda del elemento */
+  margin: 15px 0 12px;
+  /*
+   - 25px: Margen superior de 25 píxeles.
+   - 0: No se aplican márgenes en los lados derecho e izquierdo.
+   - 12px: Margen inferior de 12 píxeles.
+  */
+  
+    font-size: 50px;
+}
+
+.card__title{
+    font-size: 28px;
+    color:#EF4147;
+    margin-bottom: 1px;
+}
+
+.card__title span{
+  color:whitesmoke;
+}
+
+.point{
+  font-size: 18px;
+  color: #5d5c5c88;
+  font-style: italic;
+  margin-left: 20px;
+}
+
+.mw-impresionesMascota {
+  display:flex;
+  align-items: center;
+}
+
+.mw_mascotaCargada-actionButtons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 10px;
+}
+
+.mw_mascotaCargada-actionButtons i{
+  color:#F05376;
+  font-size: 30px;
+}
+
+.mw_mascotaCargada-actionButtons i:hover{
+  color: var(--pink2);
+  font-size: 33px;
+}
+
+
+.card_button {
+  font-size: 15px;
+  border-radius: 12px;
+  border: none;
+  padding: 5px;
+  justify-content: center;
+  background-color: var(--beige2);
+  margin-left: 15px;
+  height: 20%;
+} 
+
+.buttonreturn{
+  display: flex;
+	align-items: center;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    width: 35%;
+}
+
+.buttonreturn i{
+  color: #EF4147;
+    font-size: 45px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg, #ecbcee 0%, #e1d2e1 100%); 
+    box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 70px;
+    transition: 0.2s transform;
+}
+
+.buttonreturn i:hover{
+  transform: scale(1.1);  
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+  justify-content: space-evenly;
+  width: 35%;
+  margin-right: 50%;
+    
+}
+
+.buttons i{
+    color: #EF4147;
+    font-size: 45px;
+    cursor: pointer;
+    background-color: #fff;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(180deg, #ecbcee 0%, #e1d2e1 100%); 
+    box-shadow: 0 1px 10px 0 rgba(0, 20, 20, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 70px;
+    margin: 15px;
+    transition: 0.2s transform;
+}
+
+.buttons i:hover {
+	transform: scale(1.1);
+}
+
+.caracteristicasMascota {
+    display: flex;
+    margin: 15px;
+  }
+
+.caracteristicasMascota div {
+    padding: 5px;
+}
+
+
+/*Fin pagina de matchs*/
+
+
+/* Inicio Seccion chat*/
+.mw-sectionChat {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.mw-sectionChat div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%
+}
+
+.mw-sectionChat div img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+/* Fin Seccion chat */
+
+
+/* Inicio Seccion mis Mascotas*/
+.Entregando-misMascotas {
+    width: 100%;
+    color: gray;
+    height: 100%;
+    display: none;
+    /* z-index: 2; */
+    justify-content: center;
+}
+
+.mw-misMascotas-container{ /* aca estoy editando*/
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.mw-misMascotas-container h1 {
+  display: flex;
+  justify-content: center;
+  color: var(--beige);
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.mw-misMascotas-tablero { /* aca estoy editando largo del is mascotas en adopcion*/
+    width: 90%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    /*border: 1px solid black;*/
+}
+
+.mw-misMascotas-tablero::-webkit-scrollbar {
+    width: 12px;
+}
+
+.mw-mascotaCargada { /* aca estoy editando*/
+    display: flex;
+    width: 95%;
+    border-radius: 70px;
+    padding: 15px;
+    margin-bottom: 30px;
+    background: rgb(252, 237, 239);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.mw-mascotaCargada div {
+    margin: 0 10px;
+}
+
+.mw-mascotaCargada img {
+    width: 70px;
+    height: 70px;
+    border-radius: 1000px;
+}
+
+.mw-mascotaCargada-info {
+  width: 86%;
+}
+
+.mw-mascotaCargada-info{
+  text-align: justify;
+}
+
+.img-radius {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.mw-estadoSolicitud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mw-addMascota-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    background: var(--pink2);
+    font-size: 30px;
+    color: white;
+    border: none;
+}
+
+.mw-addMascota-button:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.7);
+
+}
+
+.card_button{
+  font-size: 15px;
+  color: gray;
+
+}
+
+/* Fin Seccion mis Mascotas*/
+
+/* Inicio Seccion Panel Crear Mascota*/
+
+.content-titlepanel{
+  margin-top: 5%;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-close{
+  color: white;
+  text-align: right;
+  justify-content: right;
+}
+
+.content-titlepanel h1{
+  margin-top: 2px;
+  font-size: 30px;
+  margin-bottom: 70px;
+}
+
+.mw_mascotaFormFoto{
+ margin-right: 15%;
+}
+
+.mw-panelMascota {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    justify-content: center;
+}
+
+.mw-panelMascota-container {
+    display: flex;
+    min-width: 700px;
+    margin-top: 5%;
+    height: 60vh;
+    padding: 20px 30px;
+    background: rgb(35, 35, 35,0.9);
+    color: #fff;
+    border-radius: 35px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.content-form-panel{
+  width: 100%;
+  margin-top: 3%;
+  text-align: center;  
+  margin-bottom: 10%;
+}
+
+.content-form-panel label{
+  font-size: 15px;
+}
+
+.content-form-panel input, select{
+  margin: 4px;
+  font-size: 15px;
+  border-radius: 20px;
+}
+
+.mw-panelMascota-container p{
+  text-align: center;
+} 
+
+.mw-panelMascota-container img{
+  width: 250px;
+  height: 250px;
+  border-radius: 1000px;
+  margin-left: 15%;
+  margin-bottom: 30px;
+}
+
+.content-button{
+  margin-top: 3%;  
+}
+
+.mw-panelMascota-container form{
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    color: var(--red);
+    font-weight: bold;
+    font-size: 15px;
+    width: 80%;
+    margin-left: 13%;     
+}
+
+#mw-mascotaFoto {
+  color: white;
+}
+
+.mw-panelMascota-container form div {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+.mw-panelMascotaH1{
+  font-size: 23px;
+  margin: 10% 0;
+  text-align: center;
+}
+
+.mw-panelMascota-container form input {
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    font-weight: lighter;
+    padding-left: 7px;
+}
+
+.mw-panelMascotaClose{
+    width: 99%;
+    display: flex;
+    justify-content: right;
+}
+
+.mw-panelMascotaClose button{
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: white;
+}
+
+.mw-cargarMascotaButtonn{
+  margin-left: 50%;
+  background-color: rgba(247, 171, 178,0.75);
+  font-size: 20px;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  padding: 5px 10px;
+  margin: 15px;
+  width:100px;
+  cursor: pointer;
+}
+/* Fin Seccion Panel Crear Mascota*/
+
+/* Inicio Seccion Solicitudes*/ /*Aca estoy editando  mueve el fiona solicitudes a la derecha*/
+.Adoptante-solicitudesEnv{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.mw-solicitudesEnv-container{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.mw-solicitudesEnv-container h1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--beige);
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.mw-solicitudesEnv-tablero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mw-tablero-solicitudEnv { /*Aca estoy editando solicitudes enviadas */
+    display: flex;
+    margin-top: 4%;
+    border-radius: 70px;
+    padding: 10px;
+    background: rgb(252, 237, 239);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    
+}
+
+.mw-tablero-solicitudEnv div { /*aca edito*/
+    margin: 0 10px;
+    color: gray;
+}
+
+.mw-tablero-solicitudEnv img {
+    width: 70px;
+    height: 70px;
+    border-radius: 1000px;
+}
+
+.img-radius {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Fin Seccion Solicitudes*/
+
+/* Inicio Seccion home*/
+.mw-sectionHome {
+  /* margin-top: 2%; */
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: scroll;
+}
+
+.tittle-comunidad h1{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: var(--beige);
+  letter-spacing: 5px;
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+
+.content-text{
+  margin-top: 1%;
+  width: 100%;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+  text-align: center;
+}
+
+.content-text p{
+  font-size: 18px;
+  margin: 0% 2%;
+}
+
+
+.content-text button{
+  background-color: var(--pink2);
+  color: aliceblue;
+  border-radius: 20px;
+  border: none;
+  width: 100px;
+  height: 30px;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 2%;
+}
+
+.container-perdida{
+  text-align: center;
+}
+
+.container-perdida h2{
+  display: flex;
+  justify-content: center;
+  color: var(--beige2);
+  letter-spacing: 2px;
+  font-weight: bolder;
+  font-size: 22px;
+  font-weight:700;
+  margin-top: 4%;
+}
+
+.container-perdida p{
+  font-size: 18px;
+  margin: 1%;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.content-form{
+  text-align: center;
+  margin-top: 3%;
+}
+
+.content-form input {
+  margin: 5px 10px 20px 20px;
+  border: 1px solid var(--beige);
+}
+
+.content-form form i{
+  color: var(--pink);
+  font-size: 40px;
+}
+
+.content-form button{
+  background-color: var(--pink2);
+  color: white;
+  border-radius: 6px;
+  border: none;
+  width: 60px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.container-cardsperdidos{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-perdidos {
+  box-shadow: 1px 1px 20px -3px var(--beige2);  
+  height: 250px;
+  width: 20%;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.card__img{
+  width: 90%;
+  height: 70%;  
+  margin-top: 10px;
+  object-fit: cover;
+  border: 1px solid white;
+}
+
+.cards__text-perdidos h3 {
+  color: var(--pink);
+}
+
+.card-secondtitle {
+  color: var(--pink2);
+  font-size: 17px;
+}
+
+.card__copy{
+  font-size: 14px;
+  color: #333333;
+}
+
+
+/* Fin Seccion home*/ 
+
+/* ****************REVISAR ************* */
+
+/*Responsive*/
+/* @media screen and (max-width: 1200px) {
+
+    .card {
+      margin-left: 27%;
+      width: 43%;
+      height: 80%;
+      margin-top: 1px;
+    }
+  
+    .card_button{
+      margin-top: 0;
+      margin-bottom: 5%;
+    }
+    
+    .icons .buttons{
+      margin-left: 30%;
+      margin-top: 0;
+    }
+    } */
+  
+    /* @media screen and (max-width: 900px) {
+      .card {
+        margin-left: 20%;
+        width: 53%;
+        height: 75%;
+        margin-top: 5%;
+      }
+      
+      .card__img{
+        height: 200px; /* Cambia la altura a automática para que se ajuste al contenido *
+      }
+      
+      .icons .buttons{
+        margin-left: 27%;
+      }
+  
+      .icons .buttons .no,
+      .icons .buttons .heart {
+        width: 70px;
+        height: 70px;
+      }
+  
+      .icons .buttons .no i,
+      .icons .buttons .heart i {
+        font-size: 40px;
+      }
+    } */
+  
+  /*Responsive card*/
+  /* @media screen and (max-width: 768px) {
+  
+  .card {
+    margin-left: 18%;
+    width: 57%;
+    height: 70%;
+    margin-top: 10%;
+  }
+  
+  .card_button {
+    margin-top: 10%;
+    margin-bottom: 15%;
+  }
+  
+  .card__img{
+    height: 200px; /* Cambia la altura a automática para que se ajuste al contenido *
+  }
+  
+      .icons .buttons .no,
+      .icons .buttons .heart {
+        margin-right: 60px;
+      }
+  
+  .icons .buttons{
+    margin-left: 25%;
+  }
+  
+  } */
+  
+  /* @media screen and (max-width: 600px) {
+    
+    .card {
+      margin-left: 13%;
+      width: 70%;
+      height: 74%;
+      margin-top: 12%;
+    }
+    
+    .card__img{
+      height: 200px; /* Cambia la altura a automática para que se ajuste al contenido *
+    }
+    
+    .icons .buttons{
+      margin-left: 27%;
+    }
+      .icons .buttons .no,
+      .icons .buttons .star,
+      .icons .buttons .heart {
+        margin: 12px;
+  
+      }
+  
+      .card_button{
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+  
+    }
+   */
+    /* @media screen and (max-width: 500px) {
+  
+      .card {
+        margin-left: 10%;
+        width: 75%;
+        height: 73%;
+        margin-top: 12%;
+      }
+      
+      .card__img{
+        height: 200px;
+        margin-left: 7px; /* Cambia la altura a automática para que se ajuste al contenido *
+      }
+      
+      .icons .buttons{
+        margin-left: 23%;
+      }
+      
+      .card__title{
+        font-size: 28px;
+      }
+  
+      .cards__text {
+        font-size: 17px;
+      }
+  
+      } */
+  
+    /* @media screen and (max-width: 400px) {
+      
+      .card {
+        margin-left: 9%;
+        width: 84%;
+        height: 75%;
+        margin-top: 9%;
+      }
+      
+      .card__img{
+        height: 200px; /* Cambia la altura a automática para que se ajuste al contenido *
+      }
+      
+      .icons .buttons{
+        margin-left: 20%;
+      }
+    } */
+
+
+
+    /* PRUEBA RESPONSIVE */
+
+    @media screen and (max-width: 767px) {
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        box-sizing: content-box;
+      }
+  
+      /*  INICIO BARRA DE NAVEGACION*/
+  
+      .sidebar-pagina {
+        width: 100%;
+        height: 8%;
+        order: 1
+      }
+  
+      .sidebar {
+        display: flex;
+        flex-direction: row;
+        height: 10%;
+        position: fixed;
+        z-index: 1;
+      }
+  
+      .sidebar img {
+        width: 27px;
+        height: 27px;
+      }
+      /*  INICIO BARRA DE NAVEGACION*/
+      
+      
+      .mw-viewScreen {
+        box-sizing: content-box;
+        height: 92vh;
+      }
+  
+      .iconoHover {
+        height: 100%;
+      }
+  
+      .iconoHover i{
+        font-size: 30px;
+      }
+  
+      .iconoHover:hover {
+        font-size: 35px;
+      }
+      
+      #mw-navButtonPerfil {
+        order: -2;
+      }
+      
+      #mw-navButtonChat{
+        order:0;
+      }
+      
+      #mw-navButtonMascotas{
+        order:-1;
+      }
+      
+      /*  INICIO VIEW SCREEN*/
+  
+      /* SECCION PERFIL*/
+  
+      .mw_section-profile {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        overflow-y: scroll;
+      }
+  
+      .popup {
+        display: none;
+        right:350%;
+      }
+  
+      .profile-title{
+        text-align: center;
+      }
+      
+      .profile-information {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+      }
+  
+      .content-user {
+        width: 100%;
+        /* border: red 1px solid; */
+        height: auto;
+      }
+  
+      .content-user img{
+        width: 150px;
+        height: 150px;
+        border-radius: 1000px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 4px solid gray;
+        margin: 20px;
+      }
+  
+      .content-formInf {
+        width: 100%;
+        height: auto;
+      }
+  
+      .form-horizontal{
+        width: 100%;
+        /* border: red 1px solid; */
+        height: auto;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .mw-flex-wrap{
+        width: 100%;
+        margin: 20px 0;
+        display: flex;
+        flex-wrap: row;
+      }
+  
+      .form-group{
+        /* border: red 1px solid; */
+        height: 70px;
+        width: 150px;
+      }
+  
+      .form-group input{
+        width: 100%;
+        font-size: 12px;
+        text-align: center;
+      }
+      
+      .form-group select{
+        width: 110%;
+        height: 24px;
+        font-size: 12px;
+        text-align: center;
+      }
+  
+      .form-group label {
+        margin: 60px 0;
+      }
+  
+      .mw-flex-wrap div{
+        width: 35%;
+        margin: 20px;  
+        }
+  
+      .form-group-about{
+        width: 80%;
+      }
+  
+      .form-group-about input{
+        width: 80%;
+        padding: 20px;
+        overflow: visible;
+      }
+      
+      .btn-same {
+        margin-bottom: 100px;
+      }
+  
+      .SwalResponsive {
+        width: 100%;
+      }
+  
+      /* SECCION  MIS MASCOTAS*/
+  
+      .mw-addMascota-button {
+        width: 45%;
+        height: 6%;
+        border-radius: 20px;
+        margin: 10px 0;
+        
+      } 
+      .mw-misMascotas-container {
+        justify-content: space-between;
+      }
+  
+      .mw-misMascotas-container h1{
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+  
+      .mw-misMascotas-tablero{
+        height: 90%;
+      }
+  
+      .mw-mascotaCargada {
+        height: 15%;
+        border-radius: 60px;
+        width: 90%;
+        justify-content: center;
+      }
+  
+      .mw-mascotaCargada div{
+        margin: 0;
+      }
+  
+      .hiden {
+        display: none;
+      }
+  
+      .mw-mascotaCargada-info{
+        width: 70%;
+      }
+  
+      .mw-impresionesMascota{
+        flex-direction: row;
+  
+      }
+      .img-radius img {
+        height: 50px;
+        width: 50px;
+        margin-right: 10px;
+      }
+  
+      .card__title{
+        font-size: 22px;
+      }
+  
+      .card_button{
+        font-size: 12px;
+        /* margin:5px; */
+      }
+  
+      .mw-mascotaCargada-info{
+        padding-left: 8px;
+      }
+  
+      .mw_mascotaCargada-actionButtons {
+        margin-left: 5px;
+      }
+      .mw_mascotaCargada-actionButtons i {
+        font-size: 25px;
+        padding: 2px;
+      }
+  
+      .mw_mascotaCargada-actionButtons i:hover{
+        color: var(--pink2);
+        font-size: 27px;
+      }
+      
+      .point{
+        /* margin-top: 10px; */
+        width: 100%;
+        font-size: 13px;
+        overflow:hidden;
+  
+      }
+  
+  
+      /* SECCION SOLICITUDES */
+  
+      .Adoptante-solicitudesEnv{
+        overflow-y: scroll;
+      }
+      
+      .mw-solicitudesEnv-container{
+        justify-content: center;
+        height: auto;
+  
+      }
+  
+      .mw-solicitudesEnv-tablero h1{
+        margin-top: 100px;
+        text-align: center;
+      }
+  
+      .mw-tablero-solicitudEnv{
+          justify-content: center;
+          width: 90%;
+          margin-bottom: 10px;
+      }
+  
+     
+  
+      /* SECCION PREFERENCES */
+  
+      
+      .mwsectionMatchPreferences{
+        height: auto;
+        /* border: 1px solid blue; */
+  
+      }
+  
+      .mw-preferences{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+      }
+  
+      .mw_preMatchContainer{
+        text-align: center;
+      }
+  
+      .mww-inputsFiltrosMAscotas{
+        flex-direction: column;
+        padding: 50px;
+      }
+  
+      .buscandoAmor {
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: baseline;
+        border-bottom: 200px;
+        /* border: 3px solid red; */
+        box-sizing: content-box;
+  
+        /* padding:20px */
+      }
+  
+      .buscandoAmorCard{
+        width: 100%;
+        height: 100px;
+      }
+      
+      .buscandoAmorCard img{
+        width: 100%;
+        display: flex;
+        justify-content: baseline;
+      }
+  
+      .buscandoAmorText p{
+        font-size: 15px;
+      }
+  
+      .circle {
+        width: 70px;
+        height: 70px;
+      }
+  
+  
+      /* SECCION MATCHES HUMAN */
+  
+        .cardHuman {
+          width: 80%;
+        }
+  
+  
+      /* SECCION MATCHES */
+  
+      .mw_sectionMatch {
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        display: none;
+        overflow-y: scroll;
+    }
+  
+      .mw-homebanner {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        /* border: 1px solid blue */
+      }
+  
+      .card{
+        width: 90%;
+      }
+      
+      .buttons i {
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+      }
+  
+  
+      /* SECCION CHAT */
+  
+      .mw-sectionChat{
+        height: 100vh;
+        width:100%
+      }
+  
+      .chat {
+        width:"300";
+        height:"500"
+      }
+      
+      .mw-sectionChat div{
+        margin-bottom: 100px;
+      }
+  
+      /* SECCION HOME */
+  
+      .tittle-comunidad h1 {
+        text-align: center;
+        margin: 40px 0;
+      }
+  
+      .card-perdidos {
+        height: 200px;
+        width: 40%;
+        height: 300px;
+        margin: 10px;
+        padding: 5px;
+      }
+  
+      .content-text{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+      }
+  
+      .content-text p{
+        width: 80%;
+        text-align: justify;
+      }
+  
+      .content-all-tittle-text button {
+        margin: 50px ;
+      }
+  
+      .mw-mascotaPerdida-atributosMascota {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        justify-content: space-evenly;
+      }
+      
+      .mw-mascotaPerdida-nombreFecha {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      .mw-mascotaPerdida-nombreFecha input{
+        text-align: center;
+      }
+    
+      #mw-publicacionesNombre {
+        width: 40%;
+        height: 18px;
+      }
+  
+      .mw-mascotaPerdida-atributosMascota select{
+        width:45%;
+        margin: 10px 5px;
+        text-align:center
+      }
+    
+      .mw-mascotaPerdida-atributosMascota input{
+        width:30%;
+        text-align:center
+      }
+  
+  
+      .mw-mascotaPerdida-acciones{
+        margin: 30px 0;
+      }
+    }

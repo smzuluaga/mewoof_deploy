@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mewoof App</title>
+    <!-- Se establecen metadatos, como el título de la página y el ícono en la pestaña del navegador -->
+    <link rel="icon" type="icon" href="img/adopcion_mascotas_perros_gatos_cat_miau.png">
+
+    <!-- Se enlaza una hoja de estilo externa llamada "styles.css" para aplicar estilos a la página -->
+    <link rel="stylesheet" href="css/aplicativo.css">
+
+    <!-- Se enlazan fuentes de Google Fonts para su uso en la página -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:wght@100&display=swap" rel="stylesheet">
+    
+    <!-- Se enlaza un archivo JavaScript externo llamado "script.js" para agregar funcionalidad a la página -->
+    <script defer src="js/aplicativo.js"></script>
+    <script defer src="js/script.js"></script>
+
+    <!-- Se enlazan archivos JavaScript y CSS para el uso de librerías y fuentes de iconos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://kit.fontawesome.com/a37bb3c75c.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> <!--Enlace iconos Boxicons-->
+    <!-- Libreria sweet alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <div class="sidebar-pagina">
+        <!-- Aquí empieza el sidebar  -->
+        <div class="sidebar">
+            <div class="iconoHover jaz" id="mw-navButtonPerfil">
+                <a href="#" class="icono" id="jaz"
+                >
+                <!--El enlace de las imagenes deberá cambiar según corresponda ESTA IMAGEN ES LA DEL USUARIO -->
+                <img
+                    src="img/user.png"
+                    alt="Icono 1"
+                /></a>
+            </div>
+            <div class="iconoHover logo" id="mw-navButtonMatch">
+                <a href="#" class="icono" id="prueba"
+                >
+                <!--El enlace de las imagenes deberá cambiar según corresponda ESTA IMAGEN ES LA DEL LOGO DE MEEWOOF -->
+                <img
+                    src="img/adopcion_mascotas_perros_gatos_cat_miau.png"
+                    alt="Icono 2"
+                /></a>
+            </div>
+            <div class="iconoHover" id="mw-navButtonChat">
+                <a href="#" class="icono"><i class="bx bx-chat"></i></a>
+            </div>
+            <div class="iconoHover" id="mw-navButtonMascotas">
+                <a href="#" class="icono"><i class="bx bx-file"></i></a>
+            </div>
+            <div class="iconoHover" id="mw-navButtonHome">
+                <a href="#" class="icono"><i class="bx bxs-home"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Aquí termina el sidebar  -->
+
+    <!-- Main es la seccion donde estaran als subsecciones que correpsonden a las pantallas de los botones de la nav bar -->
+    <main class="mw-viewScreen">
+         <!-- Inicio Seccion Perfil -->
+
+        <!--Seccion editar información-->
+        <section id="mw_section-profile" class="mw-section-profile">
+            <div class="profile-container">
+                <div class="profile-title">
+                    <h1>Editar información</h1>
+                    
+                    <!-- <div class="closeSesion">
+                        <button class="btn-close">Cerrar Sesión</button>
+                    </div> -->
+                </div>
+                <div class="profile-information">
+                    <div class="content-user">
+                        <div>
+                            <img class="image-user" src="./img/user.png" alt="" />
+                            <h3 class="username-user" id="username_user"></h3>
+                        </div>
+                        
+                        <div class="btn-edit">
+                            <button type="button" class="btn-edit-but" id="open-popup">Editar Contraseña</button>
+                        </div>
+                        <div class="closeSesion btn-closeup">
+                            <button class="btn-close-but">Cerrar Sesión</button>
+                        </div>
+                        <div class="btn-closeup">
+                            <button type="button" class="btn-close-but" id="">Eliminar Usuario</button>
+                        </div>
+                        <div class="popup" id="password-popup">
+                            <!-- ⛔Esto se comento para que no se desborde⛔ -->
+                            <!-- <div class="popup-content">
+                                <div class="closeButton-container">
+                                    <span class="popup-close" id="close-popup">&times;</span>
+                                </div>
+                                <div>
+                                    <label>Anterior Contraseña</label>
+                                    <input type="password" id="password">
+                                </div>
+                                <div>
+                                    <label>Nueva Contraseña</label>
+                                    <input type="password" id="new-password">
+                                </div>
+                                <div>
+                                    <label>Confirmar Contraseña</label>
+                                    <input type="password" id="confirm-password">
+                                </div>
+                                <button type="submit" class="btn-edit-but" id="save-password">Guardar Contraseña</button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="content-formInf">
+                        <form class="form-horizontal">
+                            <div class="mw-flex-wrap">
+                                <div class="form-group">
+                                    <label for="inputName">Nombres</label>
+                                    <input type="text" id="inputName" placeholder="Escriba su nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputName">Apellidos</label>
+                                    <input type="text" id="inputApellido" placeholder="Escriba su apellido">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputEmail">Celular</label>
+                                    <input type="number" id="inputCelular" placeholder="Celular">
+                                </div>                                          
+                                <div class="form-group">
+                                    <label for="inputPais">País</label>
+                                    <select title="modalidades" name="modalidades[]" class="form-control" id="inputPais">
+                                        <option value="colombia">Colombia</option>
+                                        <!-- <option value="ecuador">Ecuador</option>
+                                        <option value="peru">Peru</option>
+                                        <option value="chile">Chile</option>
+                                        <option value="mexico">México</option>
+                                        <option value="brasi">Brasil</option>
+                                        <option value="argentina">Argentina</option> -->
+                                    </select>
+                                </div>                
+                                <div class="form-group">
+                                    <label class="" >Ciudad</label>
+                                    <select title="modalidades" name="modalidades[]" class="form-control" id="inputCiudad">
+                                        <option value="medellin">Medellin</option>
+                                        <option value="bogota">Bogota</option>
+                                        <option value="cali">Cali</option>
+                                        <option value="otra">Otra</option> 
+                                    </select>
+                                </div>
+                                <div class="form-email">
+                                    <label for="inputEmail">Email</label>
+                                    <input type="email" id="inputEmail" placeholder="Email" class="form-input">
+                                </div>                                            
+                            </div> 
+                            <!-- <div class="form-interesting">
+                                <label>Interés</label>
+                                <input type="radio" id=""> Gato
+                                <input type="radio"> Perro
+                            </div> -->
+                            <div class="form-group-about">
+                                <label>Acerca de mi</label>
+                                <input type="text" placeholder="Información relevante para la plataforma" class="form-input" id="inputAbout">
+                            </div>
+                            <div class="btn-same">
+                                <button type="submit" class="btn-same-but" id="mw-PerfilBtn-guardarCambios">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+        </section>
+        <!--Fin sección perfil -->
+        
+
+        <!--Inicio sección matches human-->
+        <section class="mw_sectionMatchHuman" id="mw-sectionMatchHuman">
+            <!--Contenedor de la imagen y el texto-->
+            <div class="mw-homebanner">
+                <div class="cardHuman">
+                    <img class="card__img" src="img/human.JPG">
+                    <div class="cards__text">
+                        <p class="card__list"></p>
+                        <h3 class="card__title">Nicolas<span class="point"> 27 años</span></h3>
+                    </div>
+                    <div class="caracteristicasMascota">
+                        <!-- <div class="mw-tagsMascota">
+                            <a class="card_button">#Alegre <br> #Divertido</a>
+                        </div> -->
+                        <div class="mw-descripcioMascota">
+                            <p class="card__copy">Vivo en Colombia, en la ciudad de Bogotá, estoy en busca un compañero gatuno con quien pueda disfrutar mis horas de trabajo remoto.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttonsHuman">
+                    <div id="noLike" class="no">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div id="like" class="heart">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Fin sección Matches Human -->
+
+            <!--Fin sección Matches Human-->
+        <!--Sección opcional de preferencias-->
+        <section class= "mw-sectionMatchPreferences" id="mw_sectionMatchPreferences">
+            <div class="mw-preferences">
+                <div class="mw_preMatchContainer">
+                    <h1>En busca de un amor:</h1>
+                </div>
+                <div class="mww-inputsFiltrosMAscotas">
+                    <div class="content-info">
+                        <label class= "mw_mascotaFormDiv" for="mw-preferencesMascotaNeedsTime">Tiempo disponible para mi mascotica</label>
+                        <select id="mw-preferencesMascotaNeedsTime">
+                            <option value=""></option>
+                            <option value="1">1h - 3h</option>
+                            <option value="2">4h - 6h</option>
+                            <option value="3">7h - 10h</option>
+                            <option value="4">10h o +</option>  
+                        </select>
+                    </div>
+                    <div>
+                        <label class= "mw_mascotaFormDiv" for="mw-preferencesMascotaNeedsMoney">Dinero disponible para mi mascotica</label>
+                        <select id="mw-preferencesMascotaNeedsMoney">
+                            <option value=""></option>
+                            <option value="1">$100.000 - $399.999</option>
+                            <option value="2">$400.000 - $699.999</option>
+                            <option value="3">$700.000 - $999.999</option>
+                            <option value="4">$1.000.000 o +</option>  
+                        </select>
+                    </div>
+                        <div>
+                            <label class= "mw_mascotaFormDiv" for="mw-preferenceMascotaNeedsSpace">Cuanto mide realmente tu vivienda</label>
+                            <select id="mw-preferenceMascotaNeedsSpace">
+                                <option value=""></option>
+                                <option value="1">10m² - 20m²</option>
+                                <option value="2">30m² - 50m²</option>
+                                <option value="3">60m² - 70m²</option>
+                                <option value="4">80m² - 90m²</option>
+                                <option value="4">100m² o +</option>   
+                            </select>
+                        </div>
+                    </div>
+                    <div class="buscandoAmor">
+                        <div class="buscandoAmorCard" id="mw-preferencesMew">
+                            <div href="preferencia1" class="circle" id="circle1">
+                                <img src="img/CatOp1.png" class="testimony__imgP" >
+                            </div>
+                            <div class="buscandoAmorText">
+                                <p>Bigotón</p>
+                            </div>
+                        </div>    
+                        <div class="buscandoAmorCard" id="mw-preferencesWoof">
+                            <div href="preferencia2" class="circle" id="circle2">
+                                <img src="img/DogOp2.png" class="testimony__imgP" >
+                            </div>
+                            <div class="buscandoAmorText">
+                                <p>Fiel</p>
+                            </div>
+                        </div>  
+                        <div class="buscandoAmorCard" id="mw-preferencesMewoof">
+                            <div href="preferencia3" class="circle" id="circle3">
+                                <img src="img/C_D_Op3.png" class="testimony__imgP" >
+                            </div>
+                            <div class="buscandoAmorText">
+                                <p>A primera vista</p>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sección opcional de preferencias-->
+        
+
+        <!-- Inicio Seccion MAtches // // FALTA HACER AJUSTES DE FORMATO -->
+        <section class="mw_sectionMatch" id="mw-sectionMatch">
+            <div class="buttonreturn">
+                <div id="return" class="return">
+                    <i class='bx bx-arrow-back'></i>
+                </div>
+            </div>
+            <!--Contenedor de la imagen y el texto-->
+            <div class="mw-homebanner">
+                <div class="card">
+                    <img src="img/bannerr2.png" class="card__img" id ="mw-mascotaCardImg">
+                    <div class="cards__text">
+                        <p class="card__list"></p>
+                        <h3 class="card__title">Fiona<span class="point"> 1 año</span></h3>
+                    </div>
+                    <div class="caracteristicasMascota">
+                        <!-- <div class="mw-tagsMascota">
+                            <a class="card_button">#Alegre <br> #Juguetona</a>
+                        </div> -->
+                        <div class="mw-descripcioMascota">
+                            <p class="card__copy">Soy de raza border y soy grande, tengo 1 año y medio, y tengo mucha energía por lo que me gusta mucho salir a jugar al parque.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons">
+                    <div id="noLike" class="no">
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <div id="like" class="heart">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Seccion MAtches -->
+
+        <!-- Inicio Seccion Chat -->
+        <section class="mw-sectionChat" id="mw_sectionChat">
+            <div>
+                <!-- <img src="img/chat.PNG" alt="chatProvisional" class="chatProvisional"> -->
+                <widgetbot
+                server="1171509194466263201"
+                channel="1171509201818898447"
+                width="800"
+                height="600"
+                ></widgetbot>
+                <script src="https://cdn.jsdelivr.net/npm/@widgetbot/html-embed"></script>
+            </div>
+        </section>
+        <!-- Fin Seccion Chat -->
+
+        <!-- Inicio Seccion Solicitudes Usuario Dando en Adopcion // FALTA HACER FORMATO-->
+        <section class="Entregando-misMascotas" id="Entregando_misMascotas">
+            <div class="mw-misMascotas-container">
+                <h1>Mis Mascotas en Adopción</h1>
+                <div class="mw-misMascotas-tablero" id="mw_misMascotas-tablero">
+                    <!-- <div class="mw-mascotaCargada">
+                        <div class="img-radius">
+                            <img src="img/banner2.png" class="mw-mascotaCargada-img">
+                        </div>
+                        <div class="mw-mascotaCargada-info">
+                            <div class="mw-impresionesMascota">
+                                <h3 class="card__title">Fiona</h3>
+                                <button class="card_button">Impresiones</button>
+                            </div>
+                            <span class="point"> 1 año</span>
+                            <p class="card__copy">  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum nostrum asperiores animi ducimus quod voluptatibus deserunt vero repudiandae consequatur, dolore consequuntur doloremque, qui accusantium repellat placeat aut repellendus. Culpa, eos!</p>
+                        </div>
+                        <div class="mw_mascotaCargada-actionButtons">
+                            <i class='bx bx-edit'  id="mw_buttonEditarMascota"></i>
+                            <i class='bx bx-trash' id="mw_buttonEliminarMascota"></i>
+                        </div>  
+                    </div> -->
+                </div>
+                <div class="mw-addMascota-button mw-mascotaCargada" id="mw_panelMascotaOpen">
+                    <i class='bx bx-plus'></i>
+                </div>
+            </div>
+
+            <!-- Inicio Seccion Cargar Mascota  Interface  // FALTA HACER FORMATO -->
+            <div class="mw-panelMascota" id="mw_panelMascota">
+                <div class="mw-panelMascota-container">
+                    <div class="content-titlepanel">
+                        <h1 class="mw-panelMascotaH1">Subir Mascotica</h1>
+                        <img src="img/DhBX_lUWsAEFdLj.jpg" alt="">
+                        <div>
+                            <label class= "mw_mascotaFormFoto" for=""></label>
+                            <input type="file" id="mw-mascotaFoto">
+                        </div>
+                    </div>
+                    <div class="content-form-panel">
+                    <form id="mw_mascotaForm" action="">
+                        <div>
+                            <label class= mw_mascotaFormDiv for="">Raza</label>
+                            <input type="text" id="mw-mascotaRaza">
+                        </div>
+                        <div>
+                            <label class= mw_mascotaFormDiv for="">Tamaño</label>
+                            <input type="text" id="mw-mascotaSize">
+                        </div>
+                        <div>
+                            <label class= mw_mascotaFormDiv for="">Nombre</label>
+                            <input type="text" id="mw-mascotaNombre">
+                        </div>
+                        <div>
+                            <label class= mw_mascotaFormDiv for="">Edad</label>
+                            <input type="text" id="mw-mascotaEdad">
+                        </div>
+                        <div>
+                            <label class= mw_mascotaFormDiv for="">Estado de Salud</label>
+                            <input type="text" id="mw-mascotaSalud">
+                        </div>
+                        <div>
+                            <label class= mw_mascotaFormDiv for="mw-mascotaNeedsTime">Necesidades de tiempo</label>
+                            <select id="mw-mascotaNeedsTime">
+                                <option value=""></option>
+                                <option value="1">1h - 3h</option>
+                                <option value="2">4h - 6h</option>
+                                <option value="3">7h - 10h</option>
+                                <option value="4">10h o +</option>  
+                            </select>
+                        </div>
+                        <div>
+                            <label class= mw_mascotaFormDiv for="mw-mascotaNeedsMoney">Gastos generales mascota</label>
+                            <select id="mw-mascotaNeedsMoney">
+                                <option value=""></option>
+                                <option value="1">$100.000 - $399.999</option>
+                                <option value="2">$400.000 - $699.999</option>
+                                <option value="3">$700.000 - $999.999</option>
+                                <option value="4">$1.000.000 o +</option>  
+                            </select>
+                        </div>
+                        <div>
+                            <label class= mw_mascotaFormDiv for="mw-mascotaNeedsStatus">¿Esterilizado?</label>
+                            <select id="mw-mascotaNeedsStatus">
+                                <option value=""></option>
+                                <option value="1">Si</option>
+                                <option value="2">No</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class= mw_mascotaFormDiv for="mw-mascotaNeedsSex">¿Macho o Hembra?</label>
+                            <select id="mw-mascotaNeedsSex">
+                                <option value=""></option>
+                                <option value="1">Hembra</option>
+                                <option value="2">Macho</option>
+                            </select>
+                        </div>
+                    </form>
+                    <div class="content-button">
+                    <div class="mw-cargarMascotaButton">
+                            <!-- <button id="mw_cargarMascotaButton" onclick="crearMascota()">Crear</button> -->
+                            <button id="mw_cargarMascotaButton" class="mw-cargarMascotaButtonn">Crear</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        <!-- Fin Seccion Cargar Mascota  Interface -->
+        </section>
+        <!-- Fin Seccion Solicitudes Usuario Dando en Adopcion -->
+        
+        <!-- Inicio Seccion Solicitudes Usuario Adoptando // FALTA HACER FORMATO -->
+        <section class="Adoptante-solicitudesEnv" id="Adoptante_solicitudesEnv">
+            <div class="mw-solicitudesEnv-container">
+                <h1>Solicitudes Enviadas</h1>
+                <div class="mw-solicitudesEnv-tablero">
+                    <div class="mw-tablero-solicitudEnv">
+                        <div class="img-radius">
+                            <img src="img/bannerr2.png" class="mw-solicitudesEnv-img">
+                        </div>
+                        <div class="mw-mascotaCargada-info">
+                            <h3 class="card__title">Fiona<span class="point"> 1 año</span></h3>
+                            <p class="card__copy hiden"> Sueño con el día en que alguien entre en el refugio, me mire a los ojos y sepa que soy la mascota que han estado esperando. Anhelo los paseos por el parque, los mimos en el sofá y los juguetes para jugar. Sé que tengo tanto amor para dar, y estoy dispuesto a hacer feliz a quien me adopte.</p>
+                        </div>
+                        <div class="mw-estadoSolicitud">
+                            <a class="card_button">Aprobado</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Fin Seccion Solicitudes Usuario Adoptando -->
+
+        <!-- Inicio Seccion home -->
+        <section class="mw-sectionHome" id="mw_sectionHome">
+            <div class="content-all-tittle-text">
+                <div class="tittle-comunidad">
+                    <h1>Comunidad mascoticas perdidas</h1>
+                </div>
+                <div class="content-text">
+                    <p>Este espacio busca crear una red de ayuda para encontrar perros y gatos perdidos a través de la publicación del caso o con el reporte de mascotas encontradas. Solo debes registrar los datos según el caso</p>
+                    <button>Publicar</button>
+                </div>
+            </div>
+            <div class="mascota-perdida" id="comunidad">
+                <div class="container-perdida">
+                    <h2>Mascotica perdida</h2>
+                    <p>Selecciona la caracteristica de la mascotica perdida</p>
+                </div>
+                <div class="content-form">
+                    <form>
+                        <input class="animal" type="radio" name="gato" id="especie-gato"><i class='bx bxs-cat'></i>
+                        <input class="animal" type="radio" name="perro" id="especie-perro"><i class='bx bxs-dog' ></i><br>
+                        <select name=" estado" id="estadobusqueda">
+                            <option name="estado" value="0">Estado de búsqueda</option>
+                            <option name="estado" value="1">Perdido</option>
+                            <option name="estado" value="2">Encontrado</option>
+                        </select>
+                        <input type="text" id="name" placeholder="Buscar por nombre">
+                        <select name="sexo" id="sexo">
+                            <option value="0" name="sexo">Sexo</option>
+                            <option value="1" name="sexo">Macho</option>
+                            <option value="2" name="sexo">Hembra</option>
+                        </select>
+                        <select title="modalidades" name="ciuades" class="form-control" id="mw-publicaciones_inputCiudad">
+                            <option name="ciudades" value="0">Ciudad</option>
+                            <option name="ciudades" value="1">Medellin</option>
+                            <option name="ciudades" value="2">Cali</option>
+                            <option name="ciudades" value="3">Bogota</option>
+                            <option name="ciudades" value="4">Cundinamarca</option>
+                            <option name="ciudades" value="5">Boyaca</option>
+                            <option name="ciudades" value="6">Manizales</option>
+                            <option name="ciudades" value="7">Bucaramanga</option>
+                            <option name="ciudades" value="8">Barrancabermeja</option>
+                            <option name="ciudades" value="9">Cartagena</option>
+                        </select><br>
+                        <select name="raza" id="">
+                            <option name="raza" value="">Raza</option>
+                            <option name="raza" value="">Raza1</option>
+                            <option name="raza" value="">Raza2</option>
+                            <option name="raza" value="">Otra</option>
+                        </select>
+                        <input type="date" id="fecha">
+                        <input type="text" id="fecha" placeholder="Fecha de extravío">
+                        <button>Buscar</button>                                      
+                        <button>Limpiar</button>                                      
+                    </form>
+                </div>
+            </div>
+            <!--Especifica que creara un contenedor para los articulos de los servicios-->
+            <div class="mw-container-cardsperdidos">
+                <article class="container-cardsperdidos">
+                    <div class="card-perdidos">
+                        <img src="img/bannerr3-op.png" class="card__img">
+                        <div class="cards__text-perdidos">
+                            <h3 class="card__title-perdido">Nala</h3>
+                            <p class="card-secondtitle">Hembra</p>
+                            <p class="card__copy">Perdido desde el 22/10/2023</p>
+                        </div>
+                    </div>
+                    <div class="card-perdidos">
+                        <img src="img/banner2.png" class="card__img">
+                        <div class="cards__text-perdidos">
+                            <h3 class="card__title-perdido">Carla</h3>
+                            <p class="card-secondtitle">hembra</p>
+                            <p class="card__copy">Perdido desde el 20/07/2023</p>
+                        </div>
+                    </div>
+                    <div class="card-perdidos">
+                        <img src="img/exi-3-opp.jpg" class="card__img">
+                        <div class="cards__text-perdidos">
+                            <h3 class="card__title-perdido">Robi</h3>
+                            <p class="card-secondtitle">Macho</p>
+                            <p class="card__copy">Perdido desde el 11/12/2022</p>
+                        </div>
+                    </div>
+                    <div class="card-perdidos">
+                        <img src="img/gatitoo.png" class="card__img">
+                        <div class="cards__text-perdidos">
+                            <h3 class="card__title-perdido">Lolita</h3>
+                            <p class="card-secondtitle">Hembra</p>
+                            <p class="card__copy">Perdido desde el 12/09/2023</p>
+                        </div>
+                    </div>                                           
+                    <div class="card-perdidos">
+                        <img src="img/perrito4.jpg" class="card__img">
+                        <div class="cards__text-perdidos">
+                            <h3 class="card__title-perdido">Carlo</h3>
+                            <p class="card-secondtitle">Macho</p>
+                            <p class="card__copy">Perdido desde el 02/11/2023</p>
+                        </div>
+                    </div>
+                    <div class="card-perdidos">
+                        <img src="img/perrito3.jpg" class="card__img">
+                        <div class="cards__text-perdidos">
+                            <h3 class="card__title-perdido">Maximo</h3>
+                            <p class="card-secondtitle">Macho</p>
+                            <p class="card__copy">Perdido desde el 25/10/2023</p>
+                        </div>
+                    </div>
+                    <div class="card-perdidos">
+                        <img src="img/Perrito5.jpeg" class="card__img">
+                        <div class="cards__text-perdidos">
+                            <h3 class="card__title-perdido">Rosa</h3>
+                            <p class="card-secondtitle">Hembra</p>
+                            <p class="card__copy">Perdido desde el 20/09/2023</p>
+                        </div>
+                    </div>
+                    <div class="card-perdidos">
+                        <img src="img/perrito6.JPG" class="card__img">
+                        <div class="cards__text-perdidos">
+                            <h3 class="card__title-perdido">Lindo</h3>
+                            <p class="card-secondtitle">Macho</p>
+                            <p class="card__copy">Perdido desde el 22/10/2023</p>
+                        </div>
+                    </div>                                           
+                </article>
+            </div>
+        </section>
+        <!-- Fin Seccion home -->
+
+    </main>
+
+</body>
+</html>
