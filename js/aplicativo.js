@@ -222,8 +222,8 @@ nombreMostrar.innerHTML = `${usuarioSesion.nombre} ${usuarioSesion.apellido}`;
 inputNombre.value = usuarioSesion.nombre;
 inputApellido.value = usuarioSesion.apellido;
 inputCelular.value = usuarioSesion.cel;
-inputPais.value = usuarioSesion.pais.toLowerCase();
-inputCiudad.value = usuarioSesion.ciudad.toLowerCase();
+inputPais.value = usuarioSesion.pais;
+inputCiudad.value = usuarioSesion.ciudad;
 inputEmail.value = usuarioSesion.email;
 
 mewoofDB.usuarios.lista.find(x=>x.email===usuarioSesion.email).about === "" ? inputAbout.value = mensajePerfil(usuarioSesion) : inputAbout.value = mewoofDB.usuarios.lista.find(x=>x.email===usuarioSesion.email).about;
@@ -295,7 +295,7 @@ botonPreferencesCat.addEventListener('click', () => {
 botonPreferencesDog.addEventListener('click', () => {
     ocultarSecciones();
     seccionMatch.style.display="flex";
-    imgVariableTarjetaMascota.src = "../img/banner2.png"
+    imgVariableTarjetaMascota.src = "../img/bannerr2.png"
 
 })
 
@@ -324,8 +324,8 @@ let formularioNecesidades = document.getElementById("mw-mascotaNeeds");
 let formularioFoto = document.getElementById("mw-mascotaFoto");
 
 botonAbrirPanelMascota.addEventListener('click', () => {
-    alert("entre")
-    seccionPanelMascota.style.display="flex";
+
+seccionPanelMascota.style.display="flex";
 });
 
 botonCerrarPanelMascota.addEventListener('click', () => {
@@ -489,7 +489,7 @@ botonCrearMascota.addEventListener('click', function(event){
     validacionRegister(mwRegisterNombre);
     validacionRegister(mwRegisterEdad);
     validacionRegister(mwRegisterSalud);
-    validacionRegister(mwRegisterNecesidades);
+    // validacionRegister(mwRegisterNecesidades);
 
     if(botonCrearMascota.id =="mw_cargarMascotaButton"){
         const contenedorDeFormularioEntregando = document.getElementById("mw_mascotaForm");
